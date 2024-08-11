@@ -1,9 +1,7 @@
-"use client"
-import React, { useState } from "react";
-import dynamic from "next/dynamic";
 
-const AgoraUIKit = dynamic(() => import("agora-react-uikit"), { ssr: false });
-const AgoraUI = () => {
+import React, { useState } from "react";
+import AgoraUIKit from "agora-react-uikit";
+const App = () => {
   const [videoCall, setVideoCall] = useState(false);
   const rtcProps = {
     appId: "4ee1725c02cf4518afbec155694446a6",
@@ -28,4 +26,4 @@ const AgoraUI = () => {
     <h3 onClick={() => setVideoCall(true)}>Start Call</h3>
   );
 };
-export default AgoraUI;
+export default App;
